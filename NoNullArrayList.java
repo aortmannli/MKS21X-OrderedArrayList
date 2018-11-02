@@ -13,6 +13,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("Value cannot be null");
     }
     super.set();
+    return super.set(i,value);
   }
 
   public boolean add(T value) {
