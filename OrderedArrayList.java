@@ -12,8 +12,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     if (value == null){
       throw new IllegalArgumentException("Value cannot be null");
     }
+    T oldboi = this.get(index);
     super.remove(index);
     add(value);
+    return oldboi;
   }
 
   public boolean add(T value) {
