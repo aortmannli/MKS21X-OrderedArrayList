@@ -5,35 +5,28 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     super();
   }
   public NoNullArrayList(int start){
-    size=start;
+    super(start);
   }
 
   public T set(int index, T value){
     if (value == null){
       throw new IllegalArgumentException("Value cannot be null");
     }
-    super.set();
-    return super.set(i,value);
+    return super.set(index,value);
   }
 
   public boolean add(T value){
    if (value == null) {
      throw new IllegalArgumentException("Value cannot be null") ;
    }
-   else {
-     super.add(value) ;
-     return true ;
-   }
    return super.add(value);
-   }
+  }
 
- public void add(int index, T value) {
+  public void add(int index, T value) {
    if (value == null) {
      throw new IllegalArgumentException("Value cannot be null") ;
    }
-   else {
-     super.add(index, value) ;
-   }
-}
+   super.add(index, value);
+  }
 
 }
