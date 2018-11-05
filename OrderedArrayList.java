@@ -33,12 +33,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
    }
 
 
-  public void add(int index, T value) {
-    if (value == null) {
-      throw new IllegalArgumentException("Value cannot be null") ;
+    public void add(int index, T value) {
+      this.add(value);
     }
-    this.add(value);
-  }
-
-
 }
